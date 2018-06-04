@@ -36,4 +36,9 @@ public class HelloController {
         }
         return list;
     }
+    
+    @RequestMapping("/hi")
+    public String sayHi() {
+        return "Hi ~~~~~~~";
+    }
 }
