@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.demo.mapper.StudentMapper">
+
+    <!-- type为实体类Student，包名已经配置，可以直接写类名 -->
+    <resultMap id="stuMap" type="com.springboot.demo.entity.Student">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="sumScore" column="sumScore" />
+        <result property="avgScore" column="avgScore" />
+        <result property="age" column="age" />
+    </resultMap>
+
+    <select id="getList" resultMap="stuMap">
+        SELECT *
+        FROM student
+    </select>
+
+    <select id="getStuById" resultMap="stuMap" parameterType="java.lang.Integer">
+        SELECT *
+        FROM STUDENT
+        WHERE id = #{id}
+    </select>
+
+    <select id="getNameById" resultType="string" parameterType="java.lang.Integer">
+        SELECT NAME
+        FROM STUDENT
+        WHERE ID = #{id}
+    </select>
+
+
+</mapper>
