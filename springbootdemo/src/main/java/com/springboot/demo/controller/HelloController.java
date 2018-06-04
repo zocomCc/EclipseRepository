@@ -36,17 +36,5 @@ public class HelloController {
         }
         return list;
     }
-    
-    @RequestMapping("/hi")
-    public String sayHi() {
-        return "Hi ~~~~~~~";
-    }
-    public void testdiff7() {}
-    public void testdiff2() {}
-    public void testdiff3() {}
-    public void testdiff5() {}
-    public void testdiff8() {}
-    public void testdif() {}
-    public void testdif11() {}
 
 }
