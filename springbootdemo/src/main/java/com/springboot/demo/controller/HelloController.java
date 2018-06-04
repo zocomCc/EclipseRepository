@@ -43,5 +43,9 @@ public class HelloController {
     }
     public void testdiff() {}
     public void testdiff2() {}
+<<<<<<< HEAD
     public void testdiff3() {}
+=======
+    public void testdiff4() {}
+>>>>>>> 89bf3eb91d76f9c905644a516802ba93201be327
 }
