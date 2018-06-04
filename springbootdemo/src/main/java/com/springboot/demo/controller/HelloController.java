@@ -42,4 +42,5 @@ public class HelloController {
         return "Hi ~~~~~~~";
     }
     public void testdiff() {}
+    public void testdiff3() {}
 }
