@@ -41,4 +41,5 @@ public class HelloController {
     public String sayHi() {
         return "Hi ~~~~~~~";
     }
+    piblic void testdiffweb(){}
 }
