@@ -41,7 +41,7 @@ public class HelloController {
     public String sayHi() {
         return "Hi ~~~~~~~";
     }
-    public void testdiff() {}
+    public void testdiff7() {}
     public void testdiff2() {}
     public void testdiff3() {}
     public void testdiff5() {}
