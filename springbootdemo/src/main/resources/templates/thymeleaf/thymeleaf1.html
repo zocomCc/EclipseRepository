@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>thymeleaf page</title>
+</head>
+<body>
+    <h1 th:text="${host}">hello word</h1>
+    <table>
+	    <tr>
+			<th>NAME</th>
+			<th>PRICE</th>
+			<th>IN STOCK</th>
+		</tr>
+        <tr th:each="lm : ${ls}">
+            <th th:text="${lm.name}">onis</th>
+            <th th:text="${lm.price}">2.41</th>
+            <th th:text="${lm.inStock}">yes</th>
+        </tr>
+    </table>
+</body>
+</html>

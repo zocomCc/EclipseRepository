@@ -1,6 +1,9 @@
 package com.springboot.demo.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -8,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -59,5 +63,31 @@ public class PageController {
         // 页面位置 /WEB-INF/jsp/page/page.jsp
         model.addAttribute("content", hello + "（第二种）");
         return "page/page1";
+    }
+    
+    /**
+     * 
+     * <p>Title: thymeleaf</p>
+     * @author cjc
+     * @date 2018年6月5日 上午8:37:46
+     * @return String
+     * <p>Description: thymeleaf 模板</p>
+     * @param map
+     * @return
+     */
+    @RequestMapping("/thymeleaf")
+    public String thymeleaf(ModelMap map) {
+        log.info("thymeleaf 模板测试");
+        List<Map<String, Object>> li = new ArrayList<>();
+        for (int i = 1; i < 6; i++) {
+            Map<String, Object> maps = new HashMap<>();
+            maps.put("name", "milk" + i);
+            maps.put("price", 2.35D + i);
+            maps.put("inStock", i % 2 == 0 ? "yes" : "no");
+            li.add(maps);
+        }
+        map.addAttribute("ls", li);
+        map.addAttribute("host", "qq.com");
+        return "thymeleaf/thymeleaf1";
     }
 }
